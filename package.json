@@ -1,0 +1,30 @@
+{
+  "name": "puzzle-temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronPTB/puzzle-temp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronPTB/puzzle-temp/issues"
+  },
+  "homepage": "https://github.com/aaronPTB/puzzle-temp#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "string-format": "^2.0.0"
+  }
+}
