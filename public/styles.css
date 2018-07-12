@@ -5,7 +5,7 @@
 body{
   background-image:url(images/bat_cave.png);
   font-family: "Courier New", Courier, monospace;
-  color:#00FF00;
+  color:black;
   text-align:center;
   width: 90vw;
   word-wrap: break-word;
@@ -48,7 +48,12 @@ h1 {
 
 #desc{
   font-size:160%;
-  color:#FF00FF;
+  color:purple;
+}
+
+#freetail{
+  width: 900px;
+  height: auto;
 }
 
 .warning img{

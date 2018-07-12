@@ -5,6 +5,14 @@
     <meta name="description" content="The best hackathon website ever">
     <title>Going Batty</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="/js/index.js">
+    </script>
   </head>
 
 <body>
@@ -22,24 +30,26 @@
   <br/><br/>
 
   <div class="warning">
-    <img src="images/stop.png"/>
+    <img src="images/stop.jpg"/>
     <img src="images/caution.gif">
     <img src="images/construction.gif"/>
     <img src="images/caution.gif"/>
-    <img src="images/stop.png"/>
+    <img src="images/stop.jpg"/>
+  </div>
+
+  <img src='images/freetail_team.jpg.jpeg' id='freetail'/>
+
+  <br/><br/><br/>
+  <marquee>{{code}}</marquee>
+  <br/><br/><br/>
+
+  <div>
+    <input type="text" name="code" id="answer"/><br/>
+    <button onclick="submitResults()">Submit</button>
   </div>
 
   <br/><br/><br/>
-  {{code}}
-  <br/><br/><br/>
-
-  <form action="/" method="post">
-    <input type="text" name="code"/><br/>
-    <input type="submit" value="Submit"/>
-  </form>
-
-  <br/><br/><br/>
-  <MARQUEE WIDTH=400px BEHAVIOR=SCROLL BGColor=#00FFFF LOOP=100>Thanks for visiting our website! Please come again soon!</MARQUEE>
+  <MARQUEE WIDTH=400px BEHAVIOR=alternate BGColor=#00FFFF LOOP=100>Thanks for visiting our website! Please come again soon!</MARQUEE>
   <br/><br/><br/>
   <div style='height:100px; text-align:center'>
     <img src='images/ns_logo.gif'/>
