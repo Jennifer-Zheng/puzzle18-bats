@@ -6,11 +6,10 @@ var code_template = require('./code');
 const format = require('string-format');
 
 router.get("/", function(req, res, next) {
-
-	// if (!req.session.token) {
-	// 	res.redirect(process.env.HOST_SERVICE);
-	// 	return;
-	// }
+	if (!req.session.token) {
+		res.redirect(process.env.HOST_SERVICE);
+		return;
+	}
 
 	res.render("index",{
 		code: Buffer.from(format(code_template,...calculateHash(req.session.id).toString('hex')))
@@ -19,7 +18,6 @@ router.get("/", function(req, res, next) {
 });
 
 router.get("/start", function(req, res, next) {
-
 	if (!req.query.token) {
 		res.redirect(process.env.HOST_SERVICE);
 	} else if (process.env.HOST_SERVICE) {
@@ -51,24 +49,24 @@ router.get("/start", function(req, res, next) {
 });
 
 router.post("/", function(req, res, next) {
+  var passcode = calculateHash(req.session.id).toString();
 
-   var passcode = calculateHash(req.session.id).toString();
-
-	 if(req.body.code == passcode) {
+	if(req.body.code == passcode) {
 		 if (process.env.HOST_SERVICE) {
 	 		rp({
-	 			method: "POST",
+	 			method: "GET",
 	 			uri: process.env.HOST_SERVICE+"/api/completed",
 	 			qs: {
 	 				secret: process.env.PUZZLE_SECRET,
 	 				token: req.session.token,
 	 			},
 	 			json: true
-	 		});
+	 		})
 	 	}
 		 res.json({
  			status: "success",
- 			reason: "You found the correct passcode!"
+ 			reason: "You found the correct passcode!",
+			redirect: process.env.HOST_SERVICE,
  		});
 	} else {
 		res.json({

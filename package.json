@@ -1,5 +1,5 @@
 {
-  "name": "puzzle-temp",
+  "name": "puzzle18-bats",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronPTB/puzzle-temp.git"
+    "url": "git+https://github.com/Jennifer-Zheng/puzzle18-bats.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aaronPTB/puzzle-temp/issues"
+    "url": "https://github.com/Jennifer-Zheng/puzzle18-bats/issues"
   },
-  "homepage": "https://github.com/aaronPTB/puzzle-temp#readme",
+  "homepage": "https://github.com/Jennifer-Zheng/puzzle18-bats#readme",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.0.0",
