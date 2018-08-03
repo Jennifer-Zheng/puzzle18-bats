@@ -1,6 +1,8 @@
 # puzzle18-bats
 A HackTX 2018 puzzle and innovation team project.
 
+Entrance URL: `http://localhost:3002/start`
+
 ## Config
 To run just the puzzle:
 1. Make sure you have Node and npm installed, then run `npm install`

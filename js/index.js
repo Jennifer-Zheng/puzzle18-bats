@@ -7,7 +7,7 @@ const format = require('string-format');
 
 router.get("/", function(req, res, next) {
 	if (!req.session.token) {
-		res.redirect(process.env.HOST_SERVICE);
+		res.redirect(process.env.REDIRECT_ON_COMPETE);
 		return;
 	}
 
@@ -19,7 +19,7 @@ router.get("/", function(req, res, next) {
 
 router.get("/start", function(req, res, next) {
 	if (!req.query.token) {
-		res.redirect(process.env.HOST_SERVICE);
+		res.redirect(process.env.REDIRECT_ON_COMPETE);
 	} else if (process.env.HOST_SERVICE) {
 		rp({
 			method: "GET",
@@ -36,7 +36,7 @@ router.get("/start", function(req, res, next) {
 				req.session.id = data.data.id;
 				res.redirect("/");
 			} else {
-				res.redirect(process.env.HOST_SERVICE);
+				res.redirect(process.env.REDIRECT_ON_COMPETE);
 			}
 		}).catch(function(data) {
 			res.send(data.error.message);
